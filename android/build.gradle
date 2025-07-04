@@ -43,6 +43,11 @@ android {
         targetCompatibility JavaVersion.VERSION_11
     }
 }
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
 
 dependencies {
     api 'com.google.android.gms:play-services-nearby:18.4.0'
